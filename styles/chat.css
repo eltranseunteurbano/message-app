@@ -1,0 +1,76 @@
+.chat {
+  background-color: var(--white);
+  display: flex;
+  column-gap: 0.5rem;
+
+  padding: 1rem;
+  box-sizing: border-box;
+  cursor: pointer;
+  transition: all .4s;
+  border-block-end: solid 1px var(--grey-30);
+  inline-size: 100%;
+}
+
+.chat:hover {
+  background-color: var(--grey-30);
+}
+
+.chat-box {
+  flex: 1;
+}
+
+.chat-img {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+}
+
+.chat-header, .chat-message {
+  margin: 0;
+  display: flex;
+}
+
+.chat-header {
+  margin-bottom: 0.5rem;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.chat-header span:first-child {
+  font: var(--body-16regular);
+  color: var(--black);
+}
+
+.chat-header span:last-child {
+  font: var(--caption-12regular);
+  color: var(--grey-10);
+}
+
+.chat-message {
+  column-gap: 0.25rem;
+  display: flex;
+  inline-size: 100%;
+  overflow: hidden;
+}
+
+.chat-message span:last-child {
+  font: var(--caption-12regular);
+  color: var(--grey-10);
+  flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.dobleCheck-icon {
+  background-image: url('../images/icons/doble-check.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  inline-size: 1rem;
+  block-size: 1rem;
+  filter: grayscale(1);
+}
+
+.chat-is-selected {
+  background-color: var(--grey-20) !important;
+}

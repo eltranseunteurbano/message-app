@@ -1,0 +1,80 @@
+@import './header.css';
+@import './messages-box.css';
+@import './actions.css';
+@import './atoms/atoms.css';
+@import './effects/effects.css';
+
+@import './chats.css';
+
+:root {
+  --black: #000000; 
+  --grey-10: #666667; 
+  --grey-10-50: #66666750; 
+  --grey-20: #f2f2f2; 
+  --grey-30: #f6f6f6; 
+  --grey-40: #ededed; 
+  --white: #ffffff; 
+  --green-10: #e1f7cb; 
+  --green-20: #56bca6; 
+  --red: #ff4a4a; 
+  --green-30: #429488; 
+  --blue-10: #5cb3f0; 
+  --blue-20: #E5F2FA;
+  --body-16regular: 400 1rem/1.25rem Inter; 
+  --body-16bold: 700 1rem/1.25rem Inter; 
+  --body-14regular: 400 0.875rem/1.125rem Inter; 
+  --body-14regular_u: 500 0.875rem/1.25rem Inter; 
+  --caption-12bold: 700 0.75rem/1rem Inter; 
+  --caption-12regular: 400 0.75rem/1rem Inter; 
+  --caption-12regular_u: 400 0.75rem/1.25rem Inter; 
+  
+  --shadow: 0px 2.41975px 50.8148px rgba(0, 0, 0, 0.25);
+
+  --headerSize: 80px;
+  --actionSize: 80px;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  display: flex;
+  
+  inline-size: 100vw;
+  block-size: 100vh;
+  
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  background-color: var(--grey-40);
+  transition: all .2s;
+}
+
+.app {
+  display: flex;
+  inline-size: 100%;
+  block-size: 100%;
+  max-inline-size: 1400px;
+  flex: 1;
+  margin: auto;
+  box-shadow: var(--shadow);
+}
+
+@media screen and (min-width:1400px) {
+  body {
+    padding: 1.5rem;
+  }
+  .app {
+    border-radius: 0.5rem;
+    overflow: hidden;
+  }
+}
+
+.show-chats {
+  display: block;
+  inline-size: 100%;
+  max-inline-size: none;
+}
+
+.hide-wrapper {
+  display: none;
+}

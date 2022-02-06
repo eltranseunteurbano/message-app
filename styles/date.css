@@ -1,0 +1,7 @@
+.date {
+  background-color: var(--blue-20);
+  border-radius: .5rem;
+  font: var(--body-14regular);
+  padding: .625rem;
+  align-self: center;
+}

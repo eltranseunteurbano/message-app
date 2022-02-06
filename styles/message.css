@@ -1,0 +1,83 @@
+.message {
+  background: white;
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: .25rem;
+  max-width: 410px;
+}
+
+.message-text {
+  margin: 0;
+  font: var(--body-14regular);
+}
+
+.message-text > a {
+  color: #316AFB;
+}
+
+.message.is-receiver {
+  align-self: flex-start;
+  background-color: var(--white);
+  border-radius: 0 0.5rem 0.5rem 0.5rem;
+  position: relative;
+}
+
+.message.is-receiver::before {
+  content: '';
+  inline-size: 12px;
+  block-size: 12px;
+  box-sizing: border-box;
+  border-inline-start: 6px solid transparent;
+  border-inline-end: 6px solid var(--white);
+  border-block-start: 6px solid var(--white);
+  border-block-end: 6px solid transparent;
+  position: absolute;
+  inset-block-start: 0;
+  inset-inline-end: 100%;
+}
+
+.message.is-sender {
+  align-self: flex-end;
+  background-color: var(--green-10);
+  border-radius: 0.5rem 0 0.5rem 0.5rem;
+  position: relative;
+}
+
+.message.is-sender::after {
+  content: '';
+  inline-size: 12px;
+  block-size: 12px;
+  box-sizing: border-box;
+  border-inline-start: 6px solid var(--green-10);
+  border-inline-end: 6px solid transparent;
+  border-block-start: 6px solid var(--green-10);
+  border-block-end: 6px solid transparent;
+  border-radius: 4px;
+
+  position: absolute;
+  inset-block-start: 0;
+  inset-inline-start: 100%;
+}
+
+.message-details {
+  display: flex;
+  justify-content: flex-end;
+  gap: .25rem;
+}
+
+.message-status {
+  inline-size: 1rem;
+  block-size: 1rem;
+}
+
+.message-status.is-dobleCheck {
+  background-image: url('../images/icons/doble-check.png');
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.message-date {
+  font: var(--caption-12regular);
+  color: var(--grey10);
+}
